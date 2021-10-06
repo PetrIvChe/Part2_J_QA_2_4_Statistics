@@ -8,7 +8,7 @@ class StatisticsBySalesTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         @Test
-         void shouldCalculateSumSale() {
+          void shouldCalculateSumSale() {
             //SatatisticsBySales service = new SatatisticsBySales();
             //int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
             int expected = 180;
@@ -41,9 +41,9 @@ class StatisticsBySalesTest {
 
         @Test
     void shouldCalculatelessThenAverageSumSale() {
-            int expected = 5;
+            int expected = 7;
             long actual = (long) service.lessThenAverageSumSale(sales);
         }
-        }
+}
 
 

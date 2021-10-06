@@ -47,21 +47,21 @@ public class StatisticsBySales {
 
 
     //Кол-во месяцев, в которых продажи были ниже среднего
-    public double lessThenAverageSumSale(int[] sales) {
-        long sum = sumSale(sales);
-        long average = sum / sales.length;
-        int lessMonth = 0;
-        int month = 0;
-        for (long sale : sales) {
-            if (average <= sales[lessMonth]) {
-                lessMonth = month;
+    public long lessThenAverageSumSale(long[] sales) {
+        //long sum = sumSale(sales);
+        long average = sumSale(sales) / sales.length;
+        long lessMonth = 0;
+        long month = 0;
+        for (int sale : sales) {
+            if (sale[lessMonth] < average) {
+                lessMonth = sale[lessMonth];
             }
             month = month + 1;
         }
-        return lessMonth + 1;
+        return lessMonth +1;
     }
-
 }
+
 
 //Кол-во месяцев, в которых продажи были выше среднего
 
